@@ -1,0 +1,12 @@
+<main>
+    {{#if loginPage}}
+        <h1>Welcome to NodeJS Application</h1>
+    {{/if}}
+
+    <form method="POST" action="/login">
+        Username: <input type="email" name="email"><br>
+        Password:<input type="password" name="password"><br>
+        <button type="submit">Login</button>
+        <input type="hidden" name="_csrf" value={{csrfToken}}>
+    </form>
+</main>
